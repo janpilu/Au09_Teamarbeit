@@ -3,7 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.font.*;
 /** Date: 17.11.2016
- * @author Armin
+ * @author Armin Freudenthaler
  *	Version 1.0
  */
 public class View extends JFrame{
