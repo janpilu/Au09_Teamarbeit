@@ -3,7 +3,7 @@ package Au09;
  * Klasse Controller die alles steuert.  
  * 
  * 
- * @author Simon Appel 
+ * @author Jan Langela 
  * @version 2016-09-22
  */
 import java.awt.event.*;
