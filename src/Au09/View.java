@@ -41,6 +41,7 @@ public class View extends JFrame{
         
         
         
+        
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	
         this.setTitle("Lights-Out");
