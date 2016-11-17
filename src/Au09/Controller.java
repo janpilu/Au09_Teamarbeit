@@ -1,6 +1,6 @@
 package Au09;
 /** 
- * Klasse Controller die alles steuert.
+ * Klasse Controller die alles steuert.  
  * 
  * 
  * @author Simon Appel 
