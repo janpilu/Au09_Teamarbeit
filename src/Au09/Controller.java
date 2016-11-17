@@ -1,23 +1,29 @@
-package freudenthaler;
-/** Date: 20.9.2016
- * @author Armin
- *	Version 1.0
+package Au09;
+/** 
+ * Klasse Controller die alles steuert.
+ * 
+ * 
+ * @author Simon Appel 
+ * @version 2016-09-22
  */
-
 import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.event.*;
 
-import Freudenthaler.Model;
-import Freudenthaler.View;
-public class Controller implements ActionListener, KeyListener, MouseListener{
+public class Controller implements ActionListener{
 	//Attribute
-	public Model m;
-    public View v;
+	private Model m;
+    private View v;
     //Konstruktor
     public Controller(){
         this.m = new Model();
         this.v = new View(this.m, this);
     }
+    
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
  
 }
