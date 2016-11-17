@@ -20,15 +20,16 @@ public class View extends JFrame{
     public View(Model m, Controller c){
         super();
         
-        this.Button = new JButton[25];
+        
         this.m = m;
         this.c = c;
-
+        this.Button = new JButton[25];
 //        this.d = new drawPanel(m, c);
         
         this.setLayout(new GridLayout(0,5));
      
         for(int i = 0; i < 25; i++){
+        	this.Button[i] = new JButton(""+i);
         	this.add(Button[i]);
         }
         
