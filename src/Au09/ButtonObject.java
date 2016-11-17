@@ -7,7 +7,7 @@ import javax.swing.*;
 
 /**
  * @author Jan Langela
- *
+ * @version 17.11.2016
  */
 public class ButtonObject {
 	private JButton knopf;
