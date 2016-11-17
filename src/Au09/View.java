@@ -77,6 +77,7 @@ public class View extends JFrame{
 //        this.d = new drawPanel(m, c);
         
         this.setLayout(new GridLayout(0,5));
+     
         
         
         
