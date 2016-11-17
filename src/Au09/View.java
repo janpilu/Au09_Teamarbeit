@@ -11,7 +11,7 @@ public class View extends JFrame{
     private Controller c;
 //    private drawPanel d;
 
-    private JButton[] Button;
+    private JButton[] button;
     
     
     
@@ -20,7 +20,8 @@ public class View extends JFrame{
     public View(Model m, Controller c){
         super();
         
-        this.Button = new JButton[25];
+        this.button = new JButton[25];
+
         this.m = m;
         this.c = c;
 
@@ -28,9 +29,9 @@ public class View extends JFrame{
         
         this.setLayout(new GridLayout(0,5));
      
-        for(int i = 0; i < 25; i++){
-        	this.add(Button[i]);
-        }
+        for(int i = 0; i < 25; i++)
+        	this.add(button[i]);
+        
         
         
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
