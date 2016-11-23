@@ -26,7 +26,7 @@ public class View extends JFrame{
         for(int i = 0; i < 5; i++){
             for(int j = 0; j < 5; j++){
             	button[i][j] = new JButton();
-        		button[i][j].setBackground(Color.black);;
+        		button[i][j].setBackground(Color.yellow);;
         		button[i][j].addActionListener(c);
             	this.add(button[i][j]);
             }
@@ -59,9 +59,15 @@ public class View extends JFrame{
     public void compare(JButton b){
     	for(int i = 0; i < button.length; i++){
     		for(int j = 0; j < button[i].length;++j){
-    		if(button[i][j] == b){
-    			button[i][j].setBackground(Color.blue);
-    		}
+    			if(button[i][j] == b){
+    				if(this.m.getOneChecken(i, j) == true){
+    					button[i][j].setBackground(Color.yellow);    					
+    					this.m.checken(i, j);
+    				}else{
+    					button[i][j].setBackground(Color.black);
+    					this.m.checken(i, j);
+    				}
+    			}
     		}
     	}
 		System.out.println("hans");
@@ -87,24 +93,6 @@ public class View extends JFrame{
 	
     }
     
-/*    
-    
-    public class drawPanel extends JPanel{    
-        private Model m;
-        private Controller c;
-        //Konstruktor
-        public drawPanel(Model m, Controller c){
-        	this.m = m;
-        	this.c = c;
-        }
-        
-    	protected void paintComponent(Graphics g){
-    		super.paintComponent(g);
-
-    
-    	}
-    }
-  */  
     
     
     
