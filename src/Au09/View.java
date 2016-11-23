@@ -21,10 +21,10 @@ public class View extends JFrame{
         super();
         
         
-        this.button = new JButton[5][5];
+        this.button = new JButton[7][7];
 
-        for(int i = 0; i < 5; i++){
-            for(int j = 0; j < 5; j++){
+        for(int i = 0; i < 7; i++){
+            for(int j = 0; j < 7; j++){
             	button[i][j] = new JButton();
         		button[i][j].setBackground(Color.yellow);;
         		button[i][j].addActionListener(c);
@@ -37,10 +37,34 @@ public class View extends JFrame{
 //        this.d = new drawPanel(m, c);
        
         
-        this.setLayout(new GridLayout(0,5));
- 
+        this.setLayout(new GridLayout(0,7));
+        this.button[0][0].setVisible(false);
+        this.button[0][1].setVisible(false);
+        this.button[0][2].setVisible(false);
+        this.button[0][3].setVisible(false);
+        this.button[0][4].setVisible(false);
+        this.button[0][5].setVisible(false);
+        this.button[0][6].setVisible(false);
         
+        this.button[1][0].setVisible(false);
+        this.button[2][0].setVisible(false);
+        this.button[3][0].setVisible(false);
+        this.button[4][0].setVisible(false);
+        this.button[5][0].setVisible(false);
+        this.button[6][0].setVisible(false);
         
+        this.button[1][6].setVisible(false);
+        this.button[2][6].setVisible(false);
+        this.button[3][6].setVisible(false);
+        this.button[4][6].setVisible(false);
+        this.button[5][6].setVisible(false);
+        this.button[6][6].setVisible(false);
+        
+        this.button[6][1].setVisible(false);
+        this.button[6][2].setVisible(false);
+        this.button[6][3].setVisible(false);
+        this.button[6][4].setVisible(false);
+        this.button[6][5].setVisible(false);
         
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	
@@ -61,18 +85,18 @@ public class View extends JFrame{
     		for(int j = 0; j < button[i].length;++j){
     			if(button[i][j] == b){
     				if(this.m.getOneChecken(i, j) == true){
-    					button[i][j].setBackground(Color.yellow);
-    					button[i-1][j].setBackground(Color.yellow);
-    					button[i][j-1].setBackground(Color.yellow);
-    					button[i][j+1].setBackground(Color.yellow);
-    					button[i+1][j].setBackground(Color.yellow);
+    					if(this.button[i][j].getBackground() == Color.black){ button[i][j].setBackground(Color.yellow); }else{ button[i][j].setBackground(Color.black); }
+    					if(this.button[i-1][j].getBackground() == Color.black){ button[i-1][j].setBackground(Color.yellow); }else{ button[i-1][j].setBackground(Color.black); }
+    					if(this.button[i][j-1].getBackground() == Color.black){ button[i][j-1].setBackground(Color.yellow); }else{ button[i][j-1].setBackground(Color.black); }
+    					if(this.button[i][j+1].getBackground() == Color.black){ button[i][j+1].setBackground(Color.yellow); }else{ button[i][j+1].setBackground(Color.black); }
+    					if(this.button[i+1][j].getBackground() == Color.black){ button[i+1][j].setBackground(Color.yellow); }else{ button[i+1][j].setBackground(Color.black); }
     					this.m.checken(i, j);
     				}else{
-    					button[i][j].setBackground(Color.black);
-    					button[i-1][j].setBackground(Color.black);
-    					button[i][j-1].setBackground(Color.black);
-    					button[i][j+1].setBackground(Color.black);
-    					button[i+1][j].setBackground(Color.black);
+    					if(this.button[i][j].getBackground() == Color.black){ button[i][j].setBackground(Color.yellow); }else{ button[i][j].setBackground(Color.black); }
+    					if(this.button[i-1][j].getBackground() == Color.black){ button[i-1][j].setBackground(Color.yellow); }else{ button[i-1][j].setBackground(Color.black); }
+    					if(this.button[i][j-1].getBackground() == Color.black){ button[i][j-1].setBackground(Color.yellow); }else{ button[i][j-1].setBackground(Color.black); }
+    					if(this.button[i][j+1].getBackground() == Color.black){ button[i][j+1].setBackground(Color.yellow); }else{ button[i][j+1].setBackground(Color.black); }
+    					if(this.button[i+1][j].getBackground() == Color.black){ button[i+1][j].setBackground(Color.yellow); }else{ button[i+1][j].setBackground(Color.black); }
     					this.m.checken(i, j);
     				}
     			}
