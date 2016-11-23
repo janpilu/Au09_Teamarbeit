@@ -74,12 +74,15 @@ public class View extends JFrame{
         this.setSize(400, 400);
 
         for(int i = 0; i <= (int)(Math.random()*8);i++){
-        	int x = (int)(Math.random()*5);
-        	int y = (int)(Math.random()*5);
-        	this.button[x][y].setBackground(Color.black);;
-        	this.m.checken(x, y);
-        	System.out.println("Checken");
-        	System.out.println();
+    		int x = (int)(Math.random()*5);
+    		int y = (int)(Math.random()*5);
+        	if(this.m.getOneChecken(x,y) == false){
+        		this.button[x][y].setBackground(Color.black);;
+        		this.m.checken(x, y);
+        		System.out.println("Checken");
+        		System.out.println();
+        		
+        	}
         }
         this.setVisible(true);
     }
