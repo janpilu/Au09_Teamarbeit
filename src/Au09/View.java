@@ -79,6 +79,7 @@ public class View extends JFrame{
         	this.button[x][y].setBackground(Color.black);;
         	this.m.checken(x, y);
         	System.out.println("Checken");
+        	System.out.println();
         }
         this.setVisible(true);
     }
