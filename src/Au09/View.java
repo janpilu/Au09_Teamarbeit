@@ -11,7 +11,7 @@ public class View extends JFrame{
     private Controller c;
 //    private drawPanel d;
 
-    private JButton[] button;
+    private JButton[][] button;
     
     
     
@@ -21,24 +21,24 @@ public class View extends JFrame{
         super();
         
         
-        this.button = new JButton[25];
+        this.button = new JButton[5][5];
 
-        for(int i = 0; i < 25; i++){
-        	button[i] = new JButton();
-        	button[i].setBackground(Color.black);;
+        for(int i = 0; i < 5; i++){
+            for(int j = 0; j < 5; j++){
+            	button[i][j] = new JButton();
+        		button[i][j].setBackground(Color.black);;
+        		button[i][j].addActionListener(c);
+            	this.add(button[i][j]);
+            }
         }
         this.m = m;
         this.c = c;
 
 //        this.d = new drawPanel(m, c);
+       
         
         this.setLayout(new GridLayout(0,5));
  
-       
-        
-        for(int i = 0; i < 25; i++)
-        	this.add(button[i]);
-        
         
         
         
@@ -54,6 +54,38 @@ public class View extends JFrame{
 
     
     
+    
+
+    public void compare(JButton b){
+    	for(int i = 0; i < button.length; i++){
+    		for(int j = 0; j < button[i].length;++j){
+    		if(button[i][j] == b){
+    			button[i][j].setBackground(Color.blue);
+    		}
+    		}
+    	}
+		System.out.println("hans");
+    }
+
+	/**
+	 * @return the button
+	 */
+	public JButton[][] getButton() {
+		return button;
+	}
+	
+	/**
+	 * @param button the button to set
+	 */
+	public void setButton(JButton[][] button) {
+		this.button = button;
+	}
+
+	public JButton getOneButton(int i, int j) {
+		return button[i][j];
+	}
+	
+    }
     
 /*    
     
@@ -77,4 +109,4 @@ public class View extends JFrame{
     
     
     
-}
+

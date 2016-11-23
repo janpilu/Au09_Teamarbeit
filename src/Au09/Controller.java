@@ -19,11 +19,10 @@ public class Controller implements ActionListener{
         this.m = new Model();
         this.v = new View(this.m, this);
     }
-    
 	@Override
-	public void actionPerformed(ActionEvent arg0) {
+	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		
+        System.out.println("Klicken");
+        this.v.compare((JButton)e.getSource());
 	}
- 
 }

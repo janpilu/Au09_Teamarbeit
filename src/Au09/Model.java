@@ -9,16 +9,25 @@ package Au09;
 
 
 public class Model {
-	private boolean[][] check;
-
+	private boolean[] check;
+	
+	
 	public Model(){
-		this.check = new boolean[7][7];
+		this.check = new boolean[25];
 	}
+
+	public void checken(int i){
+		check[i] = true;
+		System.out.println("Boolean");
+	}
+		
+	/*
 	public void changeColor(){
 		if(this.v.check==true){	//schwarz ist
-			this.v.		//einfärben gelb
+			this.v.		//einfï¿½rben gelb
 		}else{
 			this.v.		//schwarz setzten
 		}
 	}
+*/
 }
