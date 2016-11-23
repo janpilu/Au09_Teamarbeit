@@ -21,6 +21,7 @@ public class View extends JFrame{
         super();
         
         
+        
         this.button = new JButton[7][7];
 
         for(int i = 0; i < 7; i++){
@@ -72,7 +73,13 @@ public class View extends JFrame{
 
         this.setSize(400, 400);
 
-
+        for(int i = 0; i <= (int)Math.random()*8;i++){
+        	int x = (int)Math.random()*5;
+        	int y = (int)Math.random()*5;
+        	this.button[x][y].setBackground(Color.black);;
+        	this.m.checken(x, y);
+        	System.out.println("Checken");
+        }
         this.setVisible(true);
     }
 
@@ -125,7 +132,7 @@ public class View extends JFrame{
 	}
 	public void geloest(){
     	if(this.button[1][1].getBackground() == Color.black && this.button[1][2].getBackground() == Color.black && this.button[1][3].getBackground() == Color.black && this.button[1][4].getBackground() == Color.black && this.button[1][5].getBackground() == Color.black && this.button[2][1].getBackground() == Color.black && this.button[2][2].getBackground() == Color.black && this.button[2][3].getBackground() == Color.black && this.button[2][4].getBackground() == Color.black && this.button[2][5].getBackground() == Color.black && this.button[3][1].getBackground() == Color.black && this.button[3][2].getBackground() == Color.black && this.button[3][3].getBackground() == Color.black && this.button[3][4].getBackground() == Color.black && this.button[3][5].getBackground() == Color.black && this.button[4][1].getBackground() == Color.black && this.button[4][2].getBackground() == Color.black && this.button[4][3].getBackground() == Color.black && this.button[4][4].getBackground() == Color.black && this.button[4][5].getBackground() == Color.black && this.button[5][1].getBackground() == Color.black && this.button[5][2].getBackground() == Color.black && this.button[5][3].getBackground() == Color.black && this.button[5][4].getBackground() == Color.black && this.button[5][5].getBackground() == Color.black) 
-    	{ System.out.println("gelöst");}
+    	{ System.out.println("geloest");}
     		
 		//lalalallala
     	//lalalallala

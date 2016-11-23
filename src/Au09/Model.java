@@ -30,7 +30,14 @@ public class Model {
 			System.out.println("wird true");
 		}
 	}
-		
+
+	/**
+	 * @param check the check to set
+	 */
+	public void setCheck(boolean[][] check) {
+		this.check = check;
+	}
+
 	public boolean getOneChecken(int i, int j){
 		return this.check[i][j];
 	}
