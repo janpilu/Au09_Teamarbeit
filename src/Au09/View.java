@@ -61,10 +61,18 @@ public class View extends JFrame{
     		for(int j = 0; j < button[i].length;++j){
     			if(button[i][j] == b){
     				if(this.m.getOneChecken(i, j) == true){
-    					button[i][j].setBackground(Color.yellow);    					
+    					button[i][j].setBackground(Color.yellow);
+    					button[i-1][j].setBackground(Color.yellow);
+    					button[i][j-1].setBackground(Color.yellow);
+    					button[i][j+1].setBackground(Color.yellow);
+    					button[i+1][j].setBackground(Color.yellow);
     					this.m.checken(i, j);
     				}else{
     					button[i][j].setBackground(Color.black);
+    					button[i-1][j].setBackground(Color.black);
+    					button[i][j-1].setBackground(Color.black);
+    					button[i][j+1].setBackground(Color.black);
+    					button[i+1][j].setBackground(Color.black);
     					this.m.checken(i, j);
     				}
     			}
