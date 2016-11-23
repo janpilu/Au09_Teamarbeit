@@ -24,5 +24,6 @@ public class Controller implements ActionListener{
 		// TODO Auto-generated method stub
         System.out.println("Klicken");
         this.v.compare((JButton)e.getSource());
+        this.v.geloest();
 	}
 }
