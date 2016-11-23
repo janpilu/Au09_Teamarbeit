@@ -21,7 +21,6 @@ public class View extends JFrame{
         super();
         
         
-        
         this.button = new JButton[7][7];
 
         for(int i = 0; i < 7; i++){
@@ -103,7 +102,8 @@ public class View extends JFrame{
     			}
     		}
     	}
-		System.out.println("hans");
+		
+		geloest();
     }
 
 	/**
@@ -123,17 +123,17 @@ public class View extends JFrame{
 	public JButton getOneButton(int i, int j) {
 		return button[i][j];
 	}
-
-	
-    
 	public void geloest(){
     	if(this.button[1][1].getBackground() == Color.black && this.button[1][2].getBackground() == Color.black && this.button[1][3].getBackground() == Color.black && this.button[1][4].getBackground() == Color.black && this.button[1][5].getBackground() == Color.black && this.button[2][1].getBackground() == Color.black && this.button[2][2].getBackground() == Color.black && this.button[2][3].getBackground() == Color.black && this.button[2][4].getBackground() == Color.black && this.button[2][5].getBackground() == Color.black && this.button[3][1].getBackground() == Color.black && this.button[3][2].getBackground() == Color.black && this.button[3][3].getBackground() == Color.black && this.button[3][4].getBackground() == Color.black && this.button[3][5].getBackground() == Color.black && this.button[4][1].getBackground() == Color.black && this.button[4][2].getBackground() == Color.black && this.button[4][3].getBackground() == Color.black && this.button[4][4].getBackground() == Color.black && this.button[4][5].getBackground() == Color.black && this.button[5][1].getBackground() == Color.black && this.button[5][2].getBackground() == Color.black && this.button[5][3].getBackground() == Color.black && this.button[5][4].getBackground() == Color.black && this.button[5][5].getBackground() == Color.black) 
-    	{ System.out.println("geloest");}
+    	{ System.out.println("gelöst");}
     		
-		//lalalal
+		//lalalallala
+    	//lalalallala
 	}
 }
-
+    
+    
+    
     
     
 
