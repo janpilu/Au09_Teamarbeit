@@ -101,14 +101,22 @@ public class View extends JFrame{
     					if(this.button[i][j-1].getBackground() == Color.black){ button[i][j-1].setBackground(Color.yellow); }else{ button[i][j-1].setBackground(Color.black); }
     					if(this.button[i][j+1].getBackground() == Color.black){ button[i][j+1].setBackground(Color.yellow); }else{ button[i][j+1].setBackground(Color.black); }
     					if(this.button[i+1][j].getBackground() == Color.black){ button[i+1][j].setBackground(Color.yellow); }else{ button[i+1][j].setBackground(Color.black); }
-    					this.m.checken(i, j);
+    					this.m.checken(i,j);
+    					this.m.checken(i-1,j);
+    					this.m.checken(i,j-1);
+    					this.m.checken(i,j+1);
+    					this.m.checken(i+1, j);
     				}else{
     					if(this.button[i][j].getBackground() == Color.black){ button[i][j].setBackground(Color.yellow); }else{ button[i][j].setBackground(Color.black); }
     					if(this.button[i-1][j].getBackground() == Color.black){ button[i-1][j].setBackground(Color.yellow); }else{ button[i-1][j].setBackground(Color.black); }
     					if(this.button[i][j-1].getBackground() == Color.black){ button[i][j-1].setBackground(Color.yellow); }else{ button[i][j-1].setBackground(Color.black); }
     					if(this.button[i][j+1].getBackground() == Color.black){ button[i][j+1].setBackground(Color.yellow); }else{ button[i][j+1].setBackground(Color.black); }
     					if(this.button[i+1][j].getBackground() == Color.black){ button[i+1][j].setBackground(Color.yellow); }else{ button[i+1][j].setBackground(Color.black); }
-    					this.m.checken(i, j);
+    					this.m.checken(i,j);
+    					this.m.checken(i-1,j);
+    					this.m.checken(i,j-1);
+    					this.m.checken(i,j+1);
+    					this.m.checken(i+1,j);
     				}
     			}
     		}
