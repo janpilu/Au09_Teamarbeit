@@ -80,8 +80,8 @@ public class View extends JFrame{
         this.setSize(400, 400);
 
         for(int i = 0; i <= (int)(Math.random()*(8 - 4)+ 4);i++){
-    		int x = (int)(Math.random()*(6 - 2)+ 2);
-    		int y = (int)(Math.random()*(6 - 2)+ 2);
+    		int x = (int)(Math.random()*(6 - 1)+ 1);
+    		int y = (int)(Math.random()*(6 - 1)+ 1);
         	if(this.m.getOneChecken(x,y) == false){
         		this.button[x][y].setBackground(Color.black);;
         		this.m.checken(x, y);
@@ -96,7 +96,7 @@ public class View extends JFrame{
     
     
     /** 
-	 * Die Methode compare "bekommt" einen button und ändert dementsprechend die Hintergrundfarbe
+	 * Die Methode compare "bekommt" einen button und ï¿½ndert dementsprechend die Hintergrundfarbe
 	 * 
 	 * @param b Der JButton
 	 */
@@ -153,7 +153,7 @@ public class View extends JFrame{
 		this.button = button;
 	}
 	/**
-	 * Die Methode getOneButton returnt einen bestimmten button abhängig der parameter
+	 * Die Methode getOneButton returnt einen bestimmten button abhï¿½ngig der parameter
 	 * 
 	 * @param i Erste Wert
 	 * @param j Zweite Wert
