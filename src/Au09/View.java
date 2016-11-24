@@ -116,7 +116,8 @@ public class View extends JFrame{
     					this.m.checken(i-1,j);
     					this.m.checken(i,j-1);
     					this.m.checken(i,j+1);
-    					this.m.checken(i+1,j);					
+    					this.m.checken(i+1,j);	
+    					
     				}
     			}
     		}
