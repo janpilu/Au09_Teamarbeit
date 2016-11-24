@@ -45,7 +45,7 @@ public class Model {
 	/*
 	public void changeColor(){
 		if(this.v.check==true){	//schwarz ist
-			this.v.		//einf�rben gelb
+			this.v.		//einfarben gelb
 		}else{
 			this.v.		//schwarz setzten
 		}
