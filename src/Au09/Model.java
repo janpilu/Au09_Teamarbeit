@@ -51,6 +51,17 @@ public class Model {
 	}
 	
 	/**
+	 * Die Methode reset setzt alle boolean Werte auf false
+	 */
+	public void reset() {
+		for(int i = 0; i < 7; i++){
+            for(int j = 0; j < 7; j++){
+		this.check[i][j] = false;
+            }
+		}
+	}
+	
+	/**
 	 * Die Methode getOneChecken returnt einen boolean Wert der durch die Parameter ausgewählt wird 
 	 * 
 	 * @param i Erster Wert

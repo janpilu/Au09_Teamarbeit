@@ -12,7 +12,8 @@ public class View extends JFrame{
 //    private drawPanel d;
 
     private JButton[][] button;
-    
+    private JPanel grid;
+    private JButton reset;
     
     
     
@@ -29,22 +30,27 @@ public class View extends JFrame{
         
         
         this.button = new JButton[7][7];
-
+        this.reset = new JButton("Reset");
+        this.grid = new JPanel(new GridLayout(0,7));
+        this.reset.addActionListener(c);
+        this.setLayout(new BorderLayout());
+       
         for(int i = 0; i < 7; i++){
             for(int j = 0; j < 7; j++){
             	button[i][j] = new JButton();
         		button[i][j].setBackground(Color.yellow);;
         		button[i][j].addActionListener(c);
-            	this.add(button[i][j]);
+            	this.grid.add(button[i][j]);
             }
         }
         this.m = m;
         this.c = c;
-
+        
+        this.add(this.grid, BorderLayout.CENTER);
+        this.add(this.reset, BorderLayout.SOUTH);
 //        this.d = new drawPanel(m, c);
        
         
-        this.setLayout(new GridLayout(0,7));
         this.button[0][0].setVisible(false);
         this.button[0][1].setVisible(false);
         this.button[0][2].setVisible(false);
@@ -96,12 +102,32 @@ public class View extends JFrame{
     
     
     /** 
-	 * Die Methode compare "bekommt" einen button und ï¿½ndert dementsprechend die Hintergrundfarbe
+	 * Die Methode compare "bekommt" einen button und ändert dementsprechend die Hintergrundfarbe oder setzt das Game zurück
 	 * 
 	 * @param b Der JButton
 	 */
 
     public void compare(JButton b){
+    	if(reset == b){
+    		for(int i = 0; i < 7; i++){
+                for(int j = 0; j < 7; j++){
+            		button[i][j].setBackground(Color.yellow);;
+                	}
+                }
+    		this.m.reset();
+			System.out.println("reset");
+			for(int k = 0; k <= (int)(Math.random()*(8 - 4)+ 4);k++){
+	    		int x = (int)(Math.random()*(6 - 1)+ 1);
+	    		int y = (int)(Math.random()*(6 - 1)+ 1);
+	        	if(this.m.getOneChecken(x,y) == false){
+	        		this.button[x][y].setBackground(Color.black);;
+	        		this.m.checken(x, y);
+	        		System.out.println("Checken");
+	        		System.out.println();
+	        		
+	        	}
+	        }
+		}
     	for(int i = 0; i < button.length; i++){
     		for(int j = 0; j < button[i].length;++j){
     			if(button[i][j] == b){
@@ -128,7 +154,7 @@ public class View extends JFrame{
     					this.m.checken(i,j+1);
     					this.m.checken(i+1,j);	   					
     				}
-    			}
+    			} 
     		}
     	}
 		
@@ -136,7 +162,7 @@ public class View extends JFrame{
     }
 
 	/**
-	 * Die Methode getButton() returnt alle button
+	 * Die Methode getButton() returnt alle Buttons
 	 * 
 	 * @return button der Button
 	 */
@@ -153,7 +179,7 @@ public class View extends JFrame{
 		this.button = button;
 	}
 	/**
-	 * Die Methode getOneButton returnt einen bestimmten button abhï¿½ngig der parameter
+	 * Die Methode getOneButton returnt einen bestimmten button abhängig der parameter
 	 * 
 	 * @param i Erste Wert
 	 * @param j Zweite Wert
