@@ -16,7 +16,13 @@ public class View extends JFrame{
     
     
     
-    //Konstruktor
+    /** 
+	 * Das ist der Konstruktor der Klasse View.
+	 * holt sich model und controller und ruft am Anfang super() auf
+	 * 
+	 * @param m Das Model
+	 * @param c Der Controller
+	 */
     public View(Model m, Controller c){
         super();
         
@@ -89,7 +95,11 @@ public class View extends JFrame{
 
     
     
-    
+    /** 
+	 * Die Methode compare "bekommt" einen button und ändert dementsprechend die Hintergrundfarbe
+	 * 
+	 * @param b Der JButton
+	 */
 
     public void compare(JButton b){
     	for(int i = 0; i < button.length; i++){
@@ -126,22 +136,37 @@ public class View extends JFrame{
     }
 
 	/**
-	 * @return the button
+	 * Die Methode getButton() returnt alle button
+	 * 
+	 * @return button der Button
 	 */
 	public JButton[][] getButton() {
 		return button;
 	}
 	
 	/**
-	 * @param button the button to set
+	 * Die Methode setButton setzt einen Button
+	 * 
+	 * @param button der buttond er gesetzt wird
 	 */
 	public void setButton(JButton[][] button) {
 		this.button = button;
 	}
-
+	/**
+	 * Die Methode getOneButton returnt einen bestimmten button abhängig der parameter
+	 * 
+	 * @param i Erste Wert
+	 * @param j Zweite Wert
+	 * @return button[i][j] der bestimmte Button
+	 */
 	public JButton getOneButton(int i, int j) {
 		return button[i][j];
 	}
+	/**
+	 * Die Methode geloest() gibt eine Geloest Meldung aus.
+	 * 
+	 * 
+	 */
 	public void geloest(){
     	if(this.button[1][1].getBackground() == Color.black && this.button[1][2].getBackground() == Color.black && this.button[1][3].getBackground() == Color.black && this.button[1][4].getBackground() == Color.black && this.button[1][5].getBackground() == Color.black && this.button[2][1].getBackground() == Color.black && this.button[2][2].getBackground() == Color.black && this.button[2][3].getBackground() == Color.black && this.button[2][4].getBackground() == Color.black && this.button[2][5].getBackground() == Color.black && this.button[3][1].getBackground() == Color.black && this.button[3][2].getBackground() == Color.black && this.button[3][3].getBackground() == Color.black && this.button[3][4].getBackground() == Color.black && this.button[3][5].getBackground() == Color.black && this.button[4][1].getBackground() == Color.black && this.button[4][2].getBackground() == Color.black && this.button[4][3].getBackground() == Color.black && this.button[4][4].getBackground() == Color.black && this.button[4][5].getBackground() == Color.black && this.button[5][1].getBackground() == Color.black && this.button[5][2].getBackground() == Color.black && this.button[5][3].getBackground() == Color.black && this.button[5][4].getBackground() == Color.black && this.button[5][5].getBackground() == Color.black) 
     	{

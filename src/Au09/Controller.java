@@ -4,7 +4,7 @@ package Au09;
  * 
  * 
  * @author Jan Langela 
- * @version 2016-09-22
+ * @version 2016-11-24
  */
 import java.awt.event.*;
 import javax.swing.*;
@@ -14,11 +14,21 @@ public class Controller implements ActionListener{
 	//Attribute
 	private Model m;
     private View v;
-    //Konstruktor
+    /** 
+	 * Das ist der Konstruktor der Klasse Controller.
+	 * erstellt eine neues Model und View Object
+	 * 
+	 */
     public Controller(){
         this.m = new Model();
         this.v = new View(this.m, this);
     }
+    
+    /** 
+	 * actionPerformed zum Erkennen eines Ereignisses
+	 * 
+	 *@param e das Actionevent
+	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
